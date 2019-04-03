@@ -4,6 +4,30 @@
 *This repository contains resources to run Sonarqube 1.7 in a docker container, using PostrgreSQL as database on a dependant container. Both container will make use of VOLUMEs for persistency.*
 *Sonarqube image comes with the Branch 2.0.0 plugin that allows changing the name of the single branch that can be ananlyzed with this free version*
 
+## Build local .dockerfile 
+Open the *recepies/docker-compose.yml* file and make shure that you have the following configuration:
+
+```
+services:
+  sonarqube:
+    #image: eux86/sonarqube:v17plusbranch200
+    build: ../sonarqube17plusBranch200/.
+    image: sonarqube17branch200
+    [...]
+```
+
+## Pull image from Docker Hub
+Open the *recepies/docker-compose.yml* file and make shure that you have the following configuration:
+
+```
+services:
+  sonarqube:
+    image: eux86/sonarqube:v17plusbranch200
+    #build: ../sonarqube17plusBranch200/.
+    #image: sonarqube17branch200
+    [...]
+```
+
 ## How to run Sonarqube with persistency
 The docker-compose.yml file, unde the folder *recepies*, manages how the configuration needed to run the sonarqube and the postgreSQL containers and connect them under the same network, also creating volumes for persistency.
 

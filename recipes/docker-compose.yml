@@ -5,7 +5,7 @@ version: "2"
 
 services:
   sonarqube:
-    #image: euxregistry.azurecr.io/sonarqube17branch200:v1
+    #image: eux86/sonarqube:v17plusbranch200
     build: ../sonarqube17plusBranch200/.
     image: sonarqube17branch200
     ports:
