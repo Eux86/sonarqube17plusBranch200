@@ -1,0 +1,3 @@
+
+docker tag sonarqube17branch200:v1 euxregistry.azurecr.io/sonarqube17branch200:v1
+docker push euxregistry.azurecr.io/sonarqube17branch200:v1
