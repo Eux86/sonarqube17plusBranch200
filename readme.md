@@ -42,7 +42,7 @@ Add the -d parameter to detach the process and free the command shell:
 docker-compose up -d
 ``` 
 
-## Run a tepmorary image of Sonarqube 
+## Run a temporary image of Sonarqube 
 ### Note: this method does not allow persistency
 
 Open your command shell and *cd* into the *sonarqube17plusBranch200* folder. Then copy and paste this command:
@@ -52,7 +52,7 @@ docker build -t sonarqube .
 docker run --name sonarqube -p 9000:9000 --rm sonarqube
 ``` 
 
-## Sonarqube default credencials:
+## Sonarqube default credentials:
 * **Username**: admin
 * **Password**: admin
 
